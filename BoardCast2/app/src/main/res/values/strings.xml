@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Fruit</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_detail">DetailActivity</string>
+    <string name="title_activity_goods">GoodsActivity</string>
+    <string name="title_activity_car">CarActivity</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="DynamicAction">mycompany.fruit.DynamicReceiver</string>
+</resources>

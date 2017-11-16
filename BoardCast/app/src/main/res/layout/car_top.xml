@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/car_top"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/sum_money"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:textSize="18dp"
+        android:layout_weight="0.85"
+        android:text="总计0件商品：共0元" />
+
+    <Button
+        android:id="@+id/pay_money"
+        android:layout_width="55dp"
+        android:layout_height="70dp"
+        android:layout_weight="0.15"
+        android:background="@drawable/goodsbutton"
+        android:text="结算"
+        android:textStyle="bold"
+        android:textColor="#ffffff"
+        android:textSize="15dp" />
+</LinearLayout>
