@@ -3,13 +3,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="#FFCC00">
 
+    <!--android:text="Gravity: Start, SnapCount: 1"-->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
-        android:text="Gravity: Start, SnapCount: 1"
+        android:text="蜀国"
         android:textSize="16sp" />
 
     <com.zhong.midterm.MultiSnapRecyclerView
@@ -20,11 +22,12 @@
         app:msrv_gravity="start"
         app:msrv_snap_count="1" />
 
+    <!--android:text="Gravity: Center, SnapCount: 2"-->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
-        android:text="Gravity: Center, SnapCount: 2"
+        android:text="魏国"
         android:textSize="16sp" />
 
     <com.zhong.midterm.MultiSnapRecyclerView
@@ -37,12 +40,13 @@
         app:msrv_snap_count="2" />
 
 
+    <!--android:text="Gravity: End, SnapCount: 2"-->
     <TextView
         android:id="@+id/item_txt_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
-        android:text="Gravity: End, SnapCount: 2"
+        android:text="吴国"
         android:textSize="16sp" />
 
     <com.zhong.midterm.MultiSnapRecyclerView
@@ -53,4 +57,5 @@
         android:orientation="horizontal"
         app:msrv_gravity="end"
         app:msrv_snap_count="2" />
+
 </LinearLayout>

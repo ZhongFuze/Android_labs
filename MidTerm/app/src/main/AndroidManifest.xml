@@ -19,20 +19,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".HorizontalActivity"
-            android:label="@string/horizontal">
-        </activity>
-
+            android:label="@string/horizontal" />
         <activity
             android:name=".VerticalActivity"
-            android:label="@string/vertical">
-        </activity>
-
-
+            android:label="@string/vertical" />
+        <activity android:name=".RegisterActivity" />
+        <activity android:name=".LoginActivity"></activity>
     </application>
-
-
 
 </manifest>

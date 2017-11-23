@@ -32,24 +32,19 @@ public class MultiSnapRecyclerView extends RecyclerView {
         multiSnapHelper = new MultiSnapHelper(gravity, snapCount);
     }
 
-    @Override
-    protected void onAttachedToWindow() {
-        super.onAttachedToWindow();
-        setOnFlingListener(null);
-        if (!(getLayoutManager() instanceof LinearLayoutManager)) {
-            throw new IllegalArgumentException("other than LinearLayoutManger is not supported");
-        }
-        if (((LinearLayoutManager) getLayoutManager()).getReverseLayout()) {
-            throw new IllegalArgumentException("reverse layout is not supported");
-        }
-        multiSnapHelper.attachToRecyclerView(MultiSnapRecyclerView.this);
-    }
+//    @Override
+//    protected void onAttachedToWindow() {
+//        super.onAttachedToWindow();
+//        setOnFlingListener(null);
+//        if (!(getLayoutManager() instanceof LinearLayoutManager)) {
+//            throw new IllegalArgumentException("other than LinearLayoutManger is not supported");
+//        }
+//        if (((LinearLayoutManager) getLayoutManager()).getReverseLayout()) {
+//            throw new IllegalArgumentException("reverse layout is not supported");
+//        }
+//        multiSnapHelper.attachToRecyclerView(MultiSnapRecyclerView.this);
+//    }
 
-    /**
-     * sets Snap Listener to RecyclerView
-     *
-     * @param listener OnSnapListener of MultiSnapRecyclerView
-     */
     public void setOnSnapListener(@NonNull final OnSnapListener listener) {
         multiSnapHelper.setListener(listener);
     }
