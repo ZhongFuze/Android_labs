@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Horizontal RecyclerView"
+        android:layout_below="@+id/vertical"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="41dp"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:id="@+id/vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Vertical RecyclerView"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true" />
+
+    <Button
+        android:id="@+id/login_in"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GO"
+        android:layout_marginTop="44dp"
+        android:layout_below="@+id/horizontal"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
+
+    <include
+        layout="@layout/swipe"
+         android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@+id/login_in"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="42dp"
+        android:id="@+id/include" />
+
+    <Button
+        android:id="@+id/fancy_buton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/include"
+        android:layout_marginTop="22dp"
+        android:text="Fancy Button"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>
