@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<litepal>
+    <dbname value="MidProject"></dbname>
+    <version value = "1"></version>
+    <list>
+        <mapping class="com.zhong.midterm.Hero"></mapping>
+        <mapping class="com.zhong.midterm.Users"></mapping>
+        <mapping class="com.zhong.midterm.User_heros"></mapping>
+        <!--<mapping class="com.zhong.MidProject.Book"></mapping>-->
+    </list>
+</litepal>

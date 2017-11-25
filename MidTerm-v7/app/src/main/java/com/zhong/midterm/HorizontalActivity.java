@@ -1,0 +1,124 @@
+package com.zhong.midterm;
+
+/**
+ * Created by Zhong on 2017/11/19.
+ */
+
+import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.util.Log;
+import android.widget.Toast;
+
+import org.litepal.crud.DataSupport;
+
+import java.util.List;
+
+public class HorizontalActivity extends AppCompatActivity {
+
+    final List <Hero> heroList = DataSupport.findAll(Hero.class);
+    final List <Users> usersList = DataSupport.findAll(Users.class);
+    final List <User_heros> user_herosList = DataSupport.findAll(User_heros.class);
+
+    final List <Hero> WeiHero = DataSupport.where("native_=?","魏").find(Hero.class);
+    final List <Hero> ShuHero = DataSupport.where("native_=?","蜀").find(Hero.class);
+    final List <Hero> WuHero = DataSupport.where("native_=?","吴").find(Hero.class);
+
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_horizontal);
+        ///////////////////////////////////////
+
+
+        final int youruser_id = (int) getIntent().getSerializableExtra("youruser_id");
+        final String yourname= String.valueOf(youruser_id);
+        final List <User_heros> Weiuser = DataSupport.where("user_id=?",yourname).where("native_=?","魏").find(User_heros.class);
+        final List <User_heros> Shuuser = DataSupport.where("user_id=?",yourname).where("native_=?","蜀").find(User_heros.class);
+        final List <User_heros> Wuuser = DataSupport.where("user_id=?",yourname).where("native_=?","吴").find(User_heros.class);
+
+        for(int i=0;i<Weiuser.size();++i){
+            Log.d("Debug",Weiuser.get(i).getNative_()+" "+Weiuser.get(i).getName());
+        }
+        //查重
+
+        final HorizontalAdapter firstAdapter = new HorizontalAdapter(Shuuser);
+        MultiSnapRecyclerView firstRecyclerView = (MultiSnapRecyclerView)findViewById(R.id.first_recycler_view);
+        LinearLayoutManager firstManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
+        firstRecyclerView.setLayoutManager(firstManager);
+        firstRecyclerView.setAdapter(firstAdapter);
+
+        firstRecyclerView.addOnItemTouchListener(new OnRecyclerItemClickListener(firstRecyclerView) {
+            @Override
+            public void onItemClick(RecyclerView.ViewHolder viewHolder) {
+                HorizontalAdapter.ViewHolder viewHolder1 = (HorizontalAdapter.ViewHolder) viewHolder;
+                int postion = viewHolder1.getAdapterPosition();
+                final User_heros people = firstAdapter.getCountryPeoples().get(postion);
+                Toast.makeText(HorizontalActivity.this,"Click "+people.getName(),Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onLongClick(RecyclerView.ViewHolder viewHolder) {
+                HorizontalAdapter.ViewHolder viewHolder1 = (HorizontalAdapter.ViewHolder) viewHolder;
+                int postion = viewHolder1.getAdapterPosition();
+                final User_heros people = firstAdapter.getCountryPeoples().get(postion);
+                Toast.makeText(HorizontalActivity.this,"Long Click "+people.getName(),Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        //initCountryWei();
+        final HorizontalAdapter secondAdapter = new HorizontalAdapter(Weiuser);
+        MultiSnapRecyclerView secondRecyclerView =(MultiSnapRecyclerView) findViewById(R.id.second_recycler_view);
+        LinearLayoutManager secondManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
+        secondRecyclerView.setLayoutManager(secondManager);
+        secondRecyclerView.setAdapter(secondAdapter);
+
+        secondRecyclerView.addOnItemTouchListener(new OnRecyclerItemClickListener(secondRecyclerView) {
+            @Override
+            public void onItemClick(RecyclerView.ViewHolder viewHolder) {
+                HorizontalAdapter.ViewHolder viewHolder2 = (HorizontalAdapter.ViewHolder) viewHolder;
+                int postion = viewHolder2.getAdapterPosition();
+                final User_heros people = secondAdapter.getCountryPeoples().get(postion);
+                Toast.makeText(HorizontalActivity.this,"Click "+people.getName(),Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onLongClick(RecyclerView.ViewHolder viewHolder) {
+                HorizontalAdapter.ViewHolder viewHolder2 = (HorizontalAdapter.ViewHolder) viewHolder;
+                int postion = viewHolder2.getAdapterPosition();
+                final User_heros people = secondAdapter.getCountryPeoples().get(postion);
+                Toast.makeText(HorizontalActivity.this,"Long Click "+people.getName(),Toast.LENGTH_SHORT).show();
+            }
+        });
+
+
+        //initCountryWu();
+        final HorizontalAdapter thirdAdapter = new HorizontalAdapter(Wuuser);
+        MultiSnapRecyclerView thirdRecyclerView = (MultiSnapRecyclerView)findViewById(R.id.third_recycler_view);
+        LinearLayoutManager thirdManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
+        thirdRecyclerView.setLayoutManager(thirdManager);
+        thirdRecyclerView.setAdapter(thirdAdapter);
+
+        thirdRecyclerView.addOnItemTouchListener(new OnRecyclerItemClickListener(thirdRecyclerView) {
+            @Override
+            public void onItemClick(RecyclerView.ViewHolder viewHolder) {
+                HorizontalAdapter.ViewHolder viewHolder3 = (HorizontalAdapter.ViewHolder) viewHolder;
+                int postion = viewHolder3.getAdapterPosition();
+                final User_heros people = thirdAdapter.getCountryPeoples().get(postion);
+                Toast.makeText(HorizontalActivity.this,"Click "+people.getName(),Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onLongClick(RecyclerView.ViewHolder viewHolder) {
+                HorizontalAdapter.ViewHolder viewHolder3 = (HorizontalAdapter.ViewHolder) viewHolder;
+                int postion = viewHolder3.getAdapterPosition();
+                final User_heros people = thirdAdapter.getCountryPeoples().get(postion);
+                Toast.makeText(HorizontalActivity.this,"Long Click "+people.getName(),Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+
+
+}
