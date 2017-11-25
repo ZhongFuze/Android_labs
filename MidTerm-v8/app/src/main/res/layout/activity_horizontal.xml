@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF">
+
+    <ImageButton
+        android:id="@+id/add_shu"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:background="@drawable/changebutton"
+        app:srcCompat="@drawable/plus"
+        android:scaleType="centerInside"
+        />
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:id="@+id/shu_card">
+        <com.zhong.midterm.MultiSnapRecyclerView
+            android:id="@+id/first_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            app:msrv_gravity="start"
+            app:msrv_snap_count="1" />
+    </android.support.v7.widget.CardView>
+
+    <ImageButton
+        android:id="@+id/add_wei"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:background="@drawable/changebutton"
+        app:srcCompat="@drawable/plus"
+        android:scaleType="centerInside"
+        />
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:id="@+id/Wei_card">
+        <com.zhong.midterm.MultiSnapRecyclerView
+            android:id="@+id/second_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="horizontal"
+            app:msrv_gravity="center"
+            app:msrv_snap_count="2" />
+    </android.support.v7.widget.CardView>
+
+    <ImageButton
+        android:id="@+id/add_wu"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:background="@drawable/changebutton"
+        app:srcCompat="@drawable/plus"
+        android:scaleType="centerInside"
+        />
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:id="@+id/Wu_card">
+        <com.zhong.midterm.MultiSnapRecyclerView
+            android:id="@+id/third_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="horizontal"
+            app:msrv_gravity="end"
+            app:msrv_snap_count="2" />
+
+    </android.support.v7.widget.CardView>
+
+
+
+
+</LinearLayout>

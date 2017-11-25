@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/qiang3"
+    tools:context="com.zhong.midterm.MoveActivity">
+
+    <LinearLayout
+        android:layout_width="260dp"
+        android:layout_height="20dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/left_people"
+        android:layout_marginStart="31dp"
+        android:layout_marginTop="15dp"
+        android:id="@+id/linearLayout">
+        <com.zhong.midterm.NumberProgressBar
+            android:id="@+id/left_live"
+            android:layout_width="match_parent"
+            style="@style/NumberProgressBar_Default"
+            android:layout_height="match_parent"
+            android:layout_alignEnd="@+id/left" />
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/left"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        app:srcCompat="@drawable/minifutou"
+        android:scaleType="centerInside"
+        android:layout_marginStart="40dp"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@+id/left_people" />
+
+    <ImageView
+        android:id="@+id/right"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        app:srcCompat="@drawable/chuo_t"
+        android:scaleType="centerInside"
+        android:layout_marginEnd="29dp"
+        android:layout_alignTop="@+id/left"
+        android:layout_toStartOf="@+id/right_people" />
+    <ImageView
+        android:id="@+id/left_people"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        app:srcCompat="@drawable/zhangfei"
+        android:scaleType="centerInside"
+        android:layout_marginStart="14dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageView
+        android:id="@+id/right_people"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        app:srcCompat="@drawable/caocao"
+        android:layout_marginEnd="14dp"
+        android:layout_alignTop="@+id/left_people"
+        android:layout_alignParentEnd="true" />
+</RelativeLayout>
