@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Horizontal RecyclerView"
+        android:layout_above="@+id/login_in"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="31dp"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:id="@+id/vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Vertical RecyclerView"
+        android:layout_alignBottom="@+id/horizontal"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="76dp"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:id="@+id/login_in"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GO"
+        android:layout_marginBottom="26dp"
+        android:layout_above="@+id/include"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
+
+    <include
+        layout="@layout/swipe"
+         android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:id="@+id/include"
+        android:layout_above="@+id/fancy_buton"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="8dp" />
+
+    <Button
+        android:id="@+id/fancy_buton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fancy Button"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="87dp"
+        android:layout_alignParentEnd="true" />
+
+</RelativeLayout>
