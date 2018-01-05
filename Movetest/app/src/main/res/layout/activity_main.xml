@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:andriod="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_x="0dp"
+        android:layout_y="0dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/bgmain" />
+
+    <ImageView
+        android:id="@+id/up"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_x="480dp"
+        android:layout_y="243dp"
+        android:src="@drawable/up" />
+
+    <ImageView
+        android:id="@+id/right"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_x="521dp"
+        android:layout_y="277dp"
+        android:src="@drawable/right" />
+
+    <ImageView
+        android:id="@+id/left"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_x="438dp"
+        android:layout_y="279dp"
+        android:src="@drawable/left" />
+
+
+
+    <ImageView
+        android:id="@+id/test"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_x="1dp"
+        android:layout_y="0dp"
+
+        android:src="@drawable/sun" />
+
+    <ImageView
+        android:id="@+id/down"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_x="480dp"
+        android:layout_y="315dp"
+        android:src="@drawable/down" />
+
+
+    <TextView
+        android:id="@+id/receive"
+        android:layout_width="346dp"
+        android:layout_height="30dp"
+        android:layout_x="248dp"
+        android:layout_y="0dp"
+        android:text="Waitting"
+        android:textColor="#000000"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/connect"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:layout_x="262dp"
+        android:layout_y="318dp"
+        android:text="连接"
+        android:textSize="20sp" />
+
+    <ImageView
+        android:id="@+id/gezhi"
+        android:layout_width="49dp"
+        android:layout_height="59dp"
+        android:layout_x="122dp"
+        android:layout_y="81dp"
+        android:src="@drawable/gezhi" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="106dp"
+        android:layout_y="126dp"
+        android:text="格致园"
+        android:textColor="#333333" />
+
+    <ImageView
+        android:id="@+id/shensi"
+        android:layout_width="37dp"
+        android:layout_height="44dp"
+        android:layout_x="62dp"
+        android:layout_y="150dp"
+        android:src="@drawable/shensi" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="29dp"
+        android:layout_y="180dp"
+        android:text="慎思园"
+        android:textColor="#333333" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="41dp"
+        android:layout_y="233dp"
+        android:text="至善园"
+        android:textColor="#333333" />
+
+    <ImageView
+        android:id="@+id/zhishan"
+        android:layout_width="44dp"
+        android:layout_height="42dp"
+        android:layout_x="79dp"
+        android:layout_y="209dp"
+        android:src="@drawable/zhishan" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="144dp"
+        android:layout_y="177dp"
+        android:text="明德园"
+        android:textColor="#333333" />
+
+    <ImageView
+        android:id="@+id/mingde"
+        android:layout_width="50dp"
+        android:layout_height="63dp"
+        android:layout_x="174dp"
+        android:layout_y="136dp"
+        android:src="@drawable/mingde" />
+
+    <zhong.com.movetest.ImageText
+        android:id="@+id/buttontext1"
+        android:layout_width="100dp"
+        android:layout_height="120dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_x="163dp"
+        android:layout_y="46dp"
+        android:clickable="true"
+        android:focusable="true">
+
+    </zhong.com.movetest.ImageText>
+
+
+</AbsoluteLayout>
