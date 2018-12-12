@@ -1,10 +1,11 @@
-钟馥泽
+Fuze Zhong
 
-中山大学 数据科学与计算机学院 软件工程
+Sun Yat-sen University,SYSU
 
-邮箱：zhongfuze@qq.com
+School of Data and Computer Science
 
-QQ：553244295
+Software Engineer
 
-地址: 广东省广州市番禺区大学城中山大学明德园1号
+email：fragrancezfz@gmail.com
 
+Address: No.1 Mingde Garden, Sun Yat-sen University, University Town, Panyu District, Guangzhou, Guangdong, China
